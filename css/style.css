@@ -1,0 +1,185 @@
+/* 기본 설정 */
+:root {
+  --color-bg: #fbf4ea; /* 밝은 크림 배경 */
+  --color-bg-soft: #f3e7d6; /* 살짝 짙은 크림 배경 (구획 구분용) */
+  --color-text: #4a3728; /* 짙은 브라운 (메인 텍스트) */
+  --color-text-soft: #7a6653; /* 연한 브라운 (보조 텍스트) */
+  --color-border: #e8dac7; /* 연한 브라운 보더 */
+  --color-accent: #a9713f; /* 포인트 브라운 */
+  --color-accent-dark: #8b5a2b; /* 포인트 브라운 (hover) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.8;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+  margin-bottom: 30px;
+}
+
+/* 1. Navigation */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+#navbar .logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: var(--color-accent);
+}
+
+/* 2. Hero */
+#hero {
+  padding: 150px 20px;
+  background-color: var(--color-bg-soft);
+}
+
+#hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: var(--color-text-soft);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: var(--color-accent-dark);
+}
+
+/* 3. About */
+#about p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--color-text-soft);
+}
+
+/* 4. Menu */
+.menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  width: 250px;
+  padding: 30px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.menu-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: var(--color-bg-soft);
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.menu-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.menu-card p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text-soft);
+  margin-bottom: 15px;
+}
+
+.menu-card .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* 5. Location */
+#location {
+  background-color: var(--color-bg-soft);
+}
+
+/* 6. Contact */
+#contact p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* 7. Footer */
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-soft);
+  border-top: 1px solid var(--color-border);
+}
