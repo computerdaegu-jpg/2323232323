@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
   font-size: 16px;
@@ -22,6 +26,12 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.8;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 section {
@@ -73,6 +83,35 @@ h2 {
 #hero {
   padding: 150px 20px;
   background-color: var(--color-bg-soft);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 #hero h1 {
@@ -182,4 +221,73 @@ footer {
   font-weight: 400;
   color: var(--color-text-soft);
   border-top: 1px solid var(--color-border);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  /* Navigation: 한 줄에 다 안 들어가면 줄바꿈 되도록 */
+  #navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+
+  /* Hero: 좌우 2열 -> 위아래 배치 */
+  #hero {
+    padding: 80px 20px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 260px;
+  }
+
+  #hero h1 {
+    font-size: 36px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  /* 버튼: 모바일에서도 누르기 편한 크기 유지 */
+  .btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  /* Menu: 한 줄에 카드 1개씩 */
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card {
+    width: 100%;
+    max-width: 320px;
+  }
 }
